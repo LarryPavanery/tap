@@ -1,2 +1,3 @@
-# tap
-Projeto da disciplina Tópicos Avançados de Programação
+# TAP - Tópicos Avançados de Programação
+===
+Projetos da disciplina.
