@@ -1,5 +1,8 @@
 ##HelloWorldSpring using project Java WEB of STS IDE
 
 ```
-Download, open and run! 
+1) git clone https://github.com/LarryPavanery/tap.git
+2) > gradle jettyRun 
 ```
+
+
