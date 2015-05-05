@@ -29,5 +29,7 @@ namespace TAP.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<TAP.Models.Cliente> Clientes { get; set; }
     }
 }

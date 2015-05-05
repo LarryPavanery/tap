@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "MinhaLista";
+    /*
+     * ViewBag eh um objeto responsavel por levar informacoes para a visao (front-end), trazendo do back-end
+     */
+}
+
+<h2>MinhaLista</h2>
+<p>@ViewBag.mensagem</p>
+
+<div>
+    <ul>
+        @{
+
+            foreach (var carro in ViewBag.Carros)
+            {
+                <li class="carros">@carro</li>
+            }
+        }
+    </ul>
+</div>
+
