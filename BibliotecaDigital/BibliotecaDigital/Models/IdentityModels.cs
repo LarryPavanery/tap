@@ -29,5 +29,11 @@ namespace BibliotecaDigital.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<BibliotecaDigital.Models.Aluno> Alunoes { get; set; }
+
+        public System.Data.Entity.DbSet<BibliotecaDigital.Models.Livro> Livroes { get; set; }
+
+        public System.Data.Entity.DbSet<BibliotecaDigital.Models.Emprestimo> Emprestimoes { get; set; }
     }
 }

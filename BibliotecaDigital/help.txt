@@ -1,0 +1,12 @@
+abilitar migration -> enable-migrations
+na classe configuration 
+
+public Configuration()
+        {
+            AutomaticMigrationsEnabled = true;// se true, fica como desenvolvimento, false mantem a base.
+            ContextKey = "BibliotecaDigital.Models.ApplicationDbContext";
+        }
+
+recriar a base -> update-database
+recriar base vendo log -> update-database -verbose
+para forcar recriar ->  update-database -verbose -force
