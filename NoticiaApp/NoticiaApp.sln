@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoticiaApp", NoticiaApp\NoticiaApp.csproj", "{EAA03E9D-E244-4A7C-B1CE-1D48FC6D16A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoticiaApp.Tests", "NoticiaApp.Tests\NoticiaApp.Tests.csproj", "{A6E0D4C9-C1C3-40DF-BBEC-C92C6679B5DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAA03E9D-E244-4A7C-B1CE-1D48FC6D16A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAA03E9D-E244-4A7C-B1CE-1D48FC6D16A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAA03E9D-E244-4A7C-B1CE-1D48FC6D16A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAA03E9D-E244-4A7C-B1CE-1D48FC6D16A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6E0D4C9-C1C3-40DF-BBEC-C92C6679B5DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6E0D4C9-C1C3-40DF-BBEC-C92C6679B5DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6E0D4C9-C1C3-40DF-BBEC-C92C6679B5DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6E0D4C9-C1C3-40DF-BBEC-C92C6679B5DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
