@@ -4,7 +4,7 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Detalhes</h2>
 
 <div>
     <h4>Noticia</h4>
@@ -27,11 +27,19 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.meta)
+            @Html.DisplayNameFor(model => model.Meta)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.meta)
+            @Html.DisplayFor(model => model.Meta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Texto)
+        </dt>
+
+        <dd style="word-wrap: break-word; width: 45em; padding: 10px;">
+            @Html.DisplayFor(model => model.Texto)
         </dd>
 
         <dt>
@@ -53,6 +61,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Voltar", "Index")
 </p>
