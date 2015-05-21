@@ -9,7 +9,7 @@
 ```
 1) git clone https://github.com/LarryPavanery/tap.git
 2) cd NoticiaApp
-3) Abra o projeto o projeto através do VS
+3) Abra o projeto através do Visual Studio
 4) Start!
 ```
 
