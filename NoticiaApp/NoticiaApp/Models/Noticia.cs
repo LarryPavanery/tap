@@ -33,7 +33,7 @@ namespace NoticiaApp.Models
         /// entao essa propriedade tera o link da noticia, referenciando o site deles
         /// </summary>
         [Required]
-        [StringLength(300, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 100)]
+        [StringLength(300, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 50)]
         [DataType(DataType.MultilineText)]
         public string Texto { get; set; }
         /// <summary>

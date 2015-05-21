@@ -11,6 +11,7 @@ namespace NoticiaApp.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(NoticiaApp.Models.DBContext context)
@@ -19,7 +20,8 @@ namespace NoticiaApp.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
-            //
+            //  http://www.remondo.net/entity-framework-code-first-migrations-example/
+            // AutomaticMigrationDataLossAllowed = true;
             context.Noticias.AddOrUpdate(
              n => n.Titulo,
                new Noticia { 
