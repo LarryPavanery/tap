@@ -159,6 +159,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\GenerosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NoticiasController.cs" />
@@ -168,6 +169,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DBContext.cs" />
+    <Compile Include="Models\Genero.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Mail.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -246,6 +248,11 @@
     <Content Include="Views\Noticias\Details.cshtml" />
     <Content Include="Views\Noticias\Edit.cshtml" />
     <Content Include="Views\Noticias\Index.cshtml" />
+    <Content Include="Views\Generos\Create.cshtml" />
+    <Content Include="Views\Generos\Delete.cshtml" />
+    <Content Include="Views\Generos\Details.cshtml" />
+    <Content Include="Views\Generos\Edit.cshtml" />
+    <Content Include="Views\Generos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

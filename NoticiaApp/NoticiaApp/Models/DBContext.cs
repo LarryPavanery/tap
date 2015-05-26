@@ -18,5 +18,7 @@ namespace NoticiaApp.Models
         {
             //Database.SetInitializer(new MigrateDatabaseToLatestVersion<DBContext, Configuration>());
         }
+
+        public System.Data.Entity.DbSet<NoticiaApp.Models.Genero> Generos { get; set; }
     }
 }

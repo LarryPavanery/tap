@@ -23,6 +23,11 @@ namespace NoticiaApp.Models
         [Required]
         public string SubTitulo { get; set; }
         /// <summary>
+        /// eh o genero da noticia, podendo ser, tecnologia, saude, etc
+        /// </summary>
+        [Display(Name = "Genero")]
+        public Genero Genero { get; set; }
+        /// <summary>
         /// eh o link de quem pertence a noticia, por exemplo, se a noticia vier do olhar digital
         /// entao essa propriedade tera o link da noticia, referenciando o site deles
         /// </summary>

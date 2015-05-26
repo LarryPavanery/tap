@@ -10,113 +10,107 @@ using NoticiaApp.Models;
 
 namespace NoticiaApp.Controllers
 {
-    public class NoticiasController : Controller
+    public class GenerosController : Controller
     {
         private DBContext db = new DBContext();
 
-        // GET: Noticias
+        // GET: Generos
         public ActionResult Index()
         {
-            return View(db.Noticias.ToList());
+            return View(db.Generos.ToList());
         }
 
-        // GET: Noticias/Details/5
+        // GET: Generos/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-
-            Noticia noticia = db.Noticias.Include("Genero").Where(n => n.Id == id).First();
-            
-            if (noticia == null)
+            Genero genero = db.Generos.Find(id);
+            if (genero == null)
             {
                 return HttpNotFound();
             }
-            return View(noticia);
+            return View(genero);
         }
 
-        // GET: Noticias/Create
+        // GET: Generos/Create
         public ActionResult Create()
         {
-            ViewBag.generos = db.Generos;
-
             return View();
         }
 
-        // POST: Noticias/Create
+        // POST: Generos/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Noticia noticia)
+        public ActionResult Create([Bind(Include = "Id,tipo")] Genero genero)
         {
-            
             if (ModelState.IsValid)
             {
-                noticia.Genero = db.Generos.Find(noticia.Genero.Id);
-                db.Noticias.Add(noticia);
+                db.Generos.Add(genero);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(noticia);
+            return View(genero);
         }
 
-        // GET: Noticias/Edit/5
+        // GET: Generos/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Noticia noticia = db.Noticias.Find(id);
-            if (noticia == null)
+            Genero genero = db.Generos.Find(id);
+            if (genero == null)
             {
                 return HttpNotFound();
             }
-            return View(noticia);
+            return View(genero);
         }
 
-        // POST: Noticias/Edit/5
+        // POST: Generos/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Titulo,SubTitulo,Meta,Texto,DataCreated,LastUpdate")] Noticia noticia)
+        public ActionResult Edit([Bind(Include = "Id,tipo")] Genero genero)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(noticia).State = EntityState.Modified;
+                db.Entry(genero).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(noticia);
+            return View(genero);
         }
 
-        // GET: Noticias/Delete/5
+        // GET: Generos/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Noticia noticia = db.Noticias.Find(id);
-            if (noticia == null)
+            Genero genero = db.Generos.Find(id);
+            if (genero == null)
             {
                 return HttpNotFound();
             }
-            return View(noticia);
+            return View(genero);
         }
 
-        // POST: Noticias/Delete/5
+        // POST: Generos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Noticia noticia = db.Noticias.Find(id);
-            db.Noticias.Remove(noticia);
+            Genero genero = db.Generos.Find(id);
+            db.Generos.Remove(genero);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
